@@ -1,0 +1,12 @@
+<div id="error_explanation">
+  <div class="alert alert-danger">
+    <% if @car.errors.any? %>
+        <h2>Errors:</h2>
+        <ul>
+          <% @car.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>  
+        </ul>
+    <% end %>  
+  </div>
+</div>
