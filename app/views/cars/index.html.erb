@@ -1,0 +1,19 @@
+<% provide(:title, "Cars") %>
+
+<h3> Cars </h3>
+
+<% @cars.each do |car| %>
+
+  <p><%= car.name %></p>
+  <p><%= car.about %></p>
+  <p><%= car.comfort %></p>
+  <p>
+    <%= link_to "Edit", edit_car_path(car) %> |
+    <%= link_to "Delete", car, :confirm => "Are you sure?", :method => :delete %>
+  </p>
+  <hr />
+  
+ 
+<% end %>
+
+<p><%= link_to "Add new car", new_car_path, class: "btn btn-success" %></p>

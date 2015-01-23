@@ -1,0 +1,26 @@
+<% provide(:title, "New car") %>
+
+<h3>Add a new car</h3>
+
+<%= form_for @car do |f| %>
+  
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :about %><br />
+    <%= f.text_area :about %>
+  </p>
+  <p>
+    <%= f.label :comfort %>
+    <%= f.radio_button :comfort, 'A', :checked => true %>A
+    <%= f.radio_button :comfort, 'B' %>B
+    <%= f.radio_button :comfort, 'C' %>C
+    
+  </p>
+  <p>
+   <%= f.submit "Add car",  class: "btn btn-success" %>
+    
+  </p>
+<% end %>

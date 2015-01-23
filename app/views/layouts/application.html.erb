@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>RentalCars</title>
+  <title><%= yield(:title) %> | Car Rental Application</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
+<div class="navbar navbar-fixed-top navbar-inverse">
+  <div class ="container">
+    <h1 class = "logo" >Car rental support application</h1>
+    <nav>
+       <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Home", root_path, class: "btn btn-success" %></li>
+        
+      </ul>
+    </nav>
+  </div>  
+</div>
+  
+<div class="center jumbotron">  
 <%= yield %>
+</div>
 
 </body>
 </html>
