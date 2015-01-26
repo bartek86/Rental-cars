@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  client: MyString
+  from_date: 2015-01-26
+  to_date: 2015-01-26
+  car_id: 
+
+two:
+  client: MyString
+  from_date: 2015-01-26
+  to_date: 2015-01-26
+  car_id: 

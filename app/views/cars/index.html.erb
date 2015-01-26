@@ -4,7 +4,7 @@
 
 <% @cars.each do |car| %>
 
-  <p><%= car.name %></p>
+  <p><%= link_to car.name, car %></p>
   <p><%= car.about %></p>
   <p><%= car.comfort %></p>
   <p>
