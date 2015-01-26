@@ -4,6 +4,14 @@ class RentsController < ApplicationController
     @rent = @car.rents.create(rent_params)
     redirect_to car_path(@car)
   end
+  
+  def destroy
+    @car = Car.find(params[:car_id])
+    @rent = @car.rents.find(params[:id])
+    @rent.destroy
+    redirect_to car_path(@car)
+    flash[:success] = "Rent destroyed"
+  end
  
   private
     def rent_params

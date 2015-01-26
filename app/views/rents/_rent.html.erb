@@ -1,0 +1,13 @@
+<p>
+    Client:
+    <%= rent.client %>
+</p>
+<p>
+     Rent time:
+    From <%= rent.from_date %> to <%= rent.to_date %>
+</p>
+<p>
+    <%= link_to 'Delete rent', [rent.car, rent],
+    method: :delete,
+    data: { confirm: 'Are you sure?' } %>
+</p>

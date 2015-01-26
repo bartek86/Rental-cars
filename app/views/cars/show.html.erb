@@ -1,40 +1,22 @@
-<% provide(:title, @car.name) %>
-
-<h2><%= @car.name %></h2>
-<p><%= @car.about %></p>
-<p>Klasa: <%= @car.comfort %></p>
-<p>
-    <%= link_to "Edit", edit_car_path(@car) %>
-</p>
-
-<h2>Rents</h2>
-<% @car.rents.each do |rent| %>
-  <p>
-    <strong>Client:</strong>
-    <%= rent.client %>
-  </p>
-  <p>
-    <strong>Rent time:</strong>
-    From <%= rent.from_date %> to <%= rent.to_date %>
-  </p>
-<% end %>
-
-<h2>Add a reservation:</h2>
-<%= form_for([@car, @car.rents.build]) do |f| %>
-  <p>
-    <%= f.label :client %><br>
-    <%= f.text_field :client %>
-  </p>
-  <p>
-    <%= f.label :from_date %><br>
-    <%= f.date_select :from_date %>
-  </p>
-   <p>
-    <%= f.label :to_date %><br>
-    <%= f.date_select :to_date %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+<div class="row">
+  <aside class="col-md-8">
+    <section>  
   
+          <h1><%= @car.name %></h1>
+          <p><%= @car.about %></p>
+          <p>Klasa: <%= @car.comfort %></p>
+          <p>
+              <%= link_to "Edit", edit_car_path(@car) %>
+          </p>
+          <hr />
+   </section>
+   <section>
+      <h2>Rents</h2>
+      <%= render @car.rents %>
+   </section> 
+  </aside>
+  
+  <div class="col-md-4">
+      <h2>Add a reservation:</h2>
+      <%= render 'rents/form' %>
+  </div>
