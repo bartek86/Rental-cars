@@ -6,13 +6,13 @@
         </p>
         <p>
           <%= f.label "Rent date" %><br>
-          <%= f.date_select :from_date %>
+          <%= f.date_select :from_date, :start_year => 2015 %>
         </p>
         <p>
           <%= f.label "Return date" %><br>
-          <%= f.date_select :to_date %>
+          <%= f.date_select :to_date, :start_year => 2015 %>
         </p>
-         <p>
+        <p>
           <%= f.submit "New rent`",  class: "btn btn-success" %>
         </p>
 <% end %>

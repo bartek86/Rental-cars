@@ -1,12 +1,12 @@
-<div id="error_explanation">
-  <div class="alert alert-danger">
-    <% if @car.errors.any? %>
-        <h2>Errors:</h2>
-        <ul>
-          <% @car.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-          <% end %>  
-        </ul>
-    <% end %>  
+<% if object.errors.any? %>
+  <div id="error_explanation">
+    <div class="alert alert-danger">
+          <h2>Errors:</h2>
+          <ul>
+            <% object.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+          </ul>
+      <% end %>  
+    </div>
   </div>
-</div>
+<% end %>  
