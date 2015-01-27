@@ -6,7 +6,8 @@
   
           <h1><%= @car.name %></h1>
           <p><%= @car.about %></p>
-          <p>Klasa: <%= @car.comfort %></p>
+          <p>Klasa: <%= @car.comfort %> | 
+          Day fare: <%= Price.where("comfort = ?", @car.comfort).uniq.pluck(:fare)[0] %> zł</p>
           <p>
               <%= link_to "Edit", edit_car_path(@car) %>
           </p>

@@ -1,3 +1,5 @@
+
+
 <p>
     Client:
     <%= rent.client %>
@@ -5,6 +7,11 @@
 <p>
      Rent time:
     From <%= rent.from_date %> to <%= rent.to_date %>
+</p>
+<p>
+    <% days = (rent.to_date - rent.from_date).to_i %>
+    Days number: <%= days %> | 
+    Rent price: <%= Price.where("comfort = ?", @car.comfort).uniq.pluck(:fare)[0] * days %>zł
 </p>
 <p>
     <%= link_to 'Delete rent', [rent.car, rent],
