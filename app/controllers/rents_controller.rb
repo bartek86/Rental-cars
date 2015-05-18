@@ -2,7 +2,13 @@ class RentsController < ApplicationController
   def create
     @car = Car.find(params[:car_id])
     @rent = @car.rents.create(rent_params)
-    redirect_to car_path(@car)
+    
+    if @car.save
+      redirect_to car_path(@car), :notice => "Rent created"
+    else
+       redirect_to car_path(@car), :notice => "Wrong rent data"
+    end
+    
   end
   
   def destroy

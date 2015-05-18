@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  about: MyText
-  comfort: MyString
+car1:
+  name: Polonez
+  about: "O polonezie"
+  comfort: B
 
-two:
-  name: MyString
-  about: MyText
-  comfort: MyString
+car2:
+  name: Maluch
+  about: " o maluchu"
+  comfort: C
