@@ -1,13 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  client: MyString
-  from_date: 2015-01-26
-  to_date: 2015-01-26
-  car_id: 
+client1:
+  client: Client1
+  from_date: 2015-06-20
+  to_date: 2015-06-26
+  car_id: 1
 
-two:
-  client: MyString
+client2:
+  client: Client2
   from_date: 2015-01-26
   to_date: 2015-01-26
-  car_id: 
+  car_id: 1
+
+client3:
+  client: Client3
+  from_date: 2015-07-26
+  to_date: 2015-07-24
+  car_id: 1
