@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'static_pages/home'
+
   devise_for :users
   devise_for :installs
   # The priority is based upon order of creation: first created -> highest priority.
@@ -10,7 +12,7 @@ Rails.application.routes.draw do
     resources :rents
   end
   
-  root 'cars#index'
+  root 'static_pages#home'
   
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
